@@ -3,6 +3,7 @@ package com.demo.loans.dto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Data;
 
 @Data
@@ -23,13 +24,16 @@ public class LoanDto {
 
     @Schema(description = "total loan")
     @NotEmpty(message = "total loan can not be empty.")
+    @PositiveOrZero(message = "total loan should be zero or more")
     private int totalLoan;
 
     @Schema(description = "total amount paid ")
     @NotEmpty(message = "amount paid can not be empty.")
+    @PositiveOrZero(message = "amount paid should be zero or more")
     private int amountPaid;
 
     @Schema(description = "total outstanding amount ")
     @NotEmpty(message = "outstanding amount can not be empty.")
+    @PositiveOrZero(message = "outstanding amount should be zero or more")
     private int outstandingAmount;
 }

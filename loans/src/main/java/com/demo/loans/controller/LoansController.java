@@ -63,11 +63,11 @@ public class LoansController {
     @ApiResponses({
             @ApiResponse(
                     responseCode = "200",
-                    description = "loan created successfully."
+                    description = "loan fetched successfully."
             ),
             @ApiResponse(
                     responseCode = "500",
-                    description = "Internal error. Account not created.",
+                    description = "Internal error. Something unexpected occured.",
                     content = @Content(
                             schema = @Schema(implementation = ErrorResponseDto.class)
                     )

@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to cards related local APIs "
+  contactDetails:
+    name: "Piyush Joshi - Developer"
+    email: "impiyushjoshi@gmail.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "file:///C://springboot//configurations//springboot-demobank//config"
+server:
+  port: 8071

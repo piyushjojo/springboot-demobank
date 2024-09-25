@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "Welcome to cards related qa environment APIs "
+  contactDetails:
+    name: "Piyush Joshi - lead engineer"
+    email: "impiyushjoshi@gmail.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345

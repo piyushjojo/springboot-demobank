@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Schema(description = "Response object")
+@Schema(name = "Response." , description = "Response object")
 public class ResponseDto {
 
     @Schema(description = "response status code")

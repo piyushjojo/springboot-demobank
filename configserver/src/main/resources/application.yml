@@ -2,11 +2,41 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: "file:///C://springboot//configurations//springboot-demobank//config"
+        git:
+          uri: "https://github.com/piyushjojo/springboot-demobank-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+encrypt:
+  key: "jsiofdjakf98euwiepowlkf0k9w8e98r98q08rq0wiwekj90wer0q89ew0r9weqekl"
+  #use {cipher} with property which in encrypted, this spring can differ b/w encrypted and non encrypted.
+
+
 server:
   port: 8071
